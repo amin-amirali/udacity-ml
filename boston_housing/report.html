@@ -13142,7 +13142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13214,23 +13214,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># numpy already imported, skipping...</span>
 
-<span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="c1"># DONE: Minimum price of the data</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># DONE: Maximum price of the data</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="c1"># DONE: Mean price of the data</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="c1"># DONE: Median price of the data</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+
+<span class="c1"># DONE: Standard deviation of prices of the data</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13261,7 +13263,7 @@ Minimum price: $105000.0
 Maximum price: $1024800.0
 Mean price: $454342.9447852761
 Median price $438900.0
-Standard deviation of prices: $165340.27765266784
+Standard deviation of prices: $165171.13154429474
 </pre>
 </div>
 </div>
@@ -13294,7 +13296,8 @@ Standard deviation of prices: $165340.27765266784
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p><code>RM</code> - a higher value in this field may lead to a lower <code>MEDV</code> in that, on average, the surrounding area will have houses with more available rooms than the current record - meaning that the current record (house) is not competetive enough in the area and may be penalized for it.</p>
+<p><code>RM</code> - <del>a higher value in this field may lead to a lower <code>MEDV</code> in that, on average, the surrounding area will have houses with more available rooms than the current record - meaning that the current record (house) is not competetive enough in the area and may be penalized for it.</del></p>
+<p>If a home has a higher number of rooms, the house value is expected to increase since more rooms means more space available to live.</p>
 <p><code>LSTAT</code> - a higher value here may also lower <code>MEDV</code> in that a higher percentage of lower class people may be perceived as a less secure area - and one where house prices may be lower, to attract more people.</p>
 <p><code>PTRATIO</code> - a lower value here may increase <code>MEDV</code> in that an area with more teachers per student may be perceived as a favourable area for families to grow - it also may be perceived as a more secure area.</p>
 
@@ -13335,7 +13338,7 @@ Standard deviation of prices: $165340.27765266784
     <span class="sd">&quot;&quot;&quot; Calculates and returns the performance score between </span>
 <span class="sd">        true and predicted values based on the metric chosen. &quot;&quot;&quot;</span>
     
-    <span class="c1"># TODO: Calculate the performance score between &#39;y_true&#39; and &#39;y_predict&#39;</span>
+    <span class="c1"># DONE: Calculate the performance score between &#39;y_true&#39; and &#39;y_predict&#39;</span>
     <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span>  
     
     <span class="c1"># Return the score</span>
@@ -13440,7 +13443,8 @@ Standard deviation of prices: $165340.27765266784
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-A high R^2 coeficient on the model's results (when compared to the true results) suggest that it is hightly accurate in predicting the variation of the target variable. This means that the model is able to use independent variables to calculate the correct value of the dependent variable in 92.3% of the times.</p>
+<del>A high R^2 coeficient on the model's results (when compared to the true results) suggest that it is hightly accurate in predicting the variation of the target variable. This means that the model is able to use independent variables to calculate the correct value of the dependent variable in 92.3% of the times.</del></p>
+<p>A high R^2 coeficient suggests that the model is a very good fit to the data, given the variation of it. Specifically, the difference between the target variable's values and the predicted values using this model are very low.</p>
 
 </div>
 </div>
@@ -13740,10 +13744,14 @@ The grid searching technique that takes an ML algorithm and its <code>N</code> h
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-An issue with splitting data in 2 sets (one for training and one for testing) is that some of our original data is not being used to train the model - but rather to test it. This may be seen as a waste of data since we need to hide some data from the model to acess its accuracy.
+<del>An issue with splitting data in 2 sets (one for training and one for testing) is that some of our original data is not being used to train the model - but rather to test it. This may be seen as a waste of data since we need to hide some data from the model to acess its accuracy.
 The <code>k-fold</code> cross validation technique looks to solve this problem by splitting the whole data into <code>k</code> buckets. We will then train the model <code>k</code> times and each time, we will use a different bucket as a testing set. In the end, the final model is calculated by averaging the results of all <code>k</code> trainings.
 An issue with grid-search is that it leans on an evaluation function, which relies on test data. In this sense, it can lead to tweaking parameters by overfitting the data - and, thus, may not perform well on data that it didn't see before.
-By breaking up the data into k-buckets and running each training round on a different data set, we can alleviate this problem, at the expense of performance, since we will need to train the model <code>k</code> times the number of hyperparameters.</p>
+By breaking up the data into k-buckets and running each training round on a different data set, we can alleviate this problem, at the expense of performance, since we will need to train the model <code>k</code> times the number of hyperparameters.</del></p>
+<p>Cross-validation (<code>CV</code>) is a technique that we can use to measure the performance of an ML algorithm and it can help us understand how well the given model will generalize for new and unseen data.
+In it, we divide our training data in CV-training data and CV-cross validation data. We use the former to train the model and the latter to measure the accuracy.</p>
+<p>In <code>k-fold CV</code>, we divide the data into <code>k</code> subsets, each one called a fold (<code>f1</code>....<code>fk</code>). We then run a <code>for</code> loop <code>k</code> times, and at each <code>n</code>-th loop, we use fold-<code>n</code> as CV-validation and all others as CV-training. The accuracy is noted down and at the end of all loops, the accuracies are averaged to calculate the final accuracy. In this way, we can measure the model's accuracy as we train it, without making it biased towards the test data.</p>
+<p>We can apply <code>k-fold CV</code> to <code>grid search</code> by applying different values of the hyperparameters at each <code>CV</code> loop and calculate the accuracy for those set of values. We then, finally, pick the set of values that are most accurate.</p>
 
 </div>
 </div>
@@ -13780,7 +13788,7 @@ By breaking up the data into k-buckets and running each training round on a diff
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DONE: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">make_scorer</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
@@ -14067,6 +14075,19 @@ I would consider running the same exercise, but using data from a specific area.
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
