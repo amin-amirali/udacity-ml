@@ -2,4 +2,6 @@ boston_housing/.ipynb_checkpoints/*
 boston_housing/__pycache__/*
 boston_housing/housing.csv
 boston_housing/visuals.py
+finding_donors/census.csv
+finding_donors/visuals.py
 
