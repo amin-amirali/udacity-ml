@@ -1,0 +1,11 @@
+
+In the cancer example, sensitivity and specificity are the following:
+
+Sensitivity: Of all the people with cancer, how many were correctly diagnosed?
+Specificity: Of all the people without cancer, how many were correctly diagnosed?
+And precision and recall are the following:
+
+Recall: Of all the people who have cancer, how many did we diagnose as having cancer?
+Precision: Of all the people we diagnosed with cancer, how many actually had cancer?
+
+
