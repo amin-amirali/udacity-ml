@@ -13756,7 +13756,16 @@ This is a fantastic separation!</li>
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong>
+The hinted architecture is one that was also presented during the lectures and it is very intuitive to understand, so I opted to follow it. Our current task is to identify the breed of a dog, given a picture. Dogs, like so many other beings, are represented in pictures by a set of complex shapes that come together to form a whole. Each breed will have specific shapes that may be used to set them apart from other breeds. Keeping this in mind, the chosen architecture may work as follows:</p>
+<ol>
+<li>The three Convolutional layers will identify shapes in the images, starting from the most basic ones, to more complex combinations, unique to each breed</li>
+<li>At each one of these layers, we use filters to be able to find specific patterns in parts of the picture</li>
+<li>Since we are using more and more filters as we progress along the network, we want to avoid increasing too much the dimensionality of the output (which can lead to overfitting), so we use max pooling layers</li>
+<li>The global average pooling layer ensures that the output from the last max pooling layer is a vector, that we can use for a fully connected layer.</li>
+<li>This fully connected layer will "separate" the result into 133 categories, each one corresponding to a dog breed.</li>
+</ol>
+<p>Based on this model, we should be able to accomplish our goal - to be at least better than chance at identifying dog breeds.</p>
 
 </div>
 </div>
