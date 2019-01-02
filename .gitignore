@@ -4,4 +4,8 @@ boston_housing/housing.csv
 boston_housing/visuals.py
 finding_donors/census.csv
 finding_donors/visuals.py
+customer_segments/README.md
+customer_segments/customers.csv
+customer_segments/project_description.md
+customer_segments/visuals.py
 
