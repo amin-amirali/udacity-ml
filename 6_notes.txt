@@ -1,0 +1,5 @@
+Policy evaluation: given a Markov and a policy, calculates the state-Values (value function)
+Policy improvement: given a Markov and state-Values, calculates a better policy
+Policy iteration: receives a policy, returns an optimal policy based on successive rounds of evaluation and improvement
+Value iteration: Finds the optimal policy through successive rounds of evaluation and improvement (where the evaluation step is stopped after a single sweep through the state space).
+
