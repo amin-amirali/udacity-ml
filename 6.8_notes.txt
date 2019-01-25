@@ -1,0 +1,18 @@
+OpenAI Gym - https://gym.openai.com/docs/
+
+step() returns:
+ - Observation (object): an environment-specific object representing your observation of the environment. For example, pixel data from a camera, joint angles and joint velocities of a robot, or the board state in a board game.
+ - Reward (float): amount of reward achieved by the previous action. The scale varies between environments, but the goal is always to increase your total reward.
+ - Done (boolean): whether it's time to reset the environment again. Most (but not all) tasks are divided up into well-defined episodes, and done being True indicates the episode has terminated. (For example, perhaps the pole tipped too far, or you lost your last life.)
+ - Info (dict): diagnostic information useful for debugging. It can sometimes be useful for learning (for example, it might contain the raw probabilities behind the environment’s last state change). However, official evaluations of your agent are not allowed to use this for learning.
+
+Environment:
+ - env.action_space
+ - env.observation_space
+
+Table of environments: https://github.com/openai/gym/wiki/Table-of-environments
+... and solutions: https://github.com/openai/gym/wiki/Leaderboard
+
+Discrete(...) refers to a discrete space,
+Box(...) indicates a continuous space.
+
