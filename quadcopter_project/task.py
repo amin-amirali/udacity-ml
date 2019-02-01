@@ -28,7 +28,13 @@ class Task():
 
     def get_reward(self):
         """Uses current pose of sim to return reward."""
-        reward = 1.-.3*(abs(self.sim.pose[:3] - self.target_pos)).sum()
+        # reward = 1.-.3*(abs(self.sim.pose[:3] - self.target_pos)).sum()
+        # reward = 1.-.9*(abs(self.sim.pose[:3] - self.target_pos)).sum()
+        # reward = ((self.sim.pose[:3] - self.target_pos) * self.sim.v).sum()
+        reward = 0.8 * ((self.sim.pose[:3] - self.target_pos) * self.sim.v).sum() \
+        - 0.2 * abs(self.sim.v).sum() \
+        - 0.2 * (self.sim.pose[3:6] / (self.sim.pose[:3] - self.target_pos)).sum() # the closer we get to target, the smaller the euler angles should be
+
         return reward
 
     def step(self, rotor_speeds):
