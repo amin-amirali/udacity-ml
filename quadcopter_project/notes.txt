@@ -1,0 +1,2 @@
+This project runs fine using python 3.6.3. Look at requirements.txt for more details.
+
